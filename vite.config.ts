@@ -9,6 +9,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  },
   server: {
     port: 3000,
   },
